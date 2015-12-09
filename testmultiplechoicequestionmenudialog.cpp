@@ -33,7 +33,6 @@ along with this program. If not, see <http://www.gnu.org/licenses/>.
 #include "multiplechoicequestion.h"
 #include "testtimer.h"
 #include "multiplechoicequestiondialog.h"
-#include "richelbilderbeekprogram.h"
 #include "trace.h"
 #pragma GCC diagnostic pop
 
@@ -104,23 +103,16 @@ ribi::Help ribi::TestMultipleChoiceQuestionMenuDialog::GetHelp() const noexcept
   );
 }
 
-boost::shared_ptr<const ribi::Program> ribi::TestMultipleChoiceQuestionMenuDialog::GetProgram() const noexcept
-{
-  const boost::shared_ptr<const Program> p {
-    new ProgramTestMultipleChoiceQuestion
-  };
-  assert(p);
-  return p;
-}
 std::string ribi::TestMultipleChoiceQuestionMenuDialog::GetVersion() const noexcept
 {
-  return "1.0";
+  return "2.0";
 }
 
 std::vector<std::string> ribi::TestMultipleChoiceQuestionMenuDialog::GetVersionHistory() const noexcept
 {
   return {
-    "2013-08-20: Version 1.0: initial version"
+    "2013-08-20: Version 1.0: initial version",
+    "2015-12-09: Version 2.0: moved to own GitHub",
   };
 }
 
